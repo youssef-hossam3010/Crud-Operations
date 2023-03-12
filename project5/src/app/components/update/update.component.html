@@ -1,0 +1,24 @@
+<form class="form">
+    <div class="form-group d-flex">
+      <label class="col-3">Name</label>
+      <input #name class="form-control" type="text"  />
+    </div>
+  
+    <div class="form-group d-flex">
+      <label class="col-3">phone</label>
+      <input #phone class="form-control" type="text"  />
+    </div>
+  
+  
+    <div class="form-group d-flex">
+      <label class="col-3">city</label>
+      <input #city   class="form-control" type="text"  />
+    </div>
+  
+  
+  
+    <div class="form-group d-flex justify-content-center mt-2">
+      <input class="btn btn-outline-dark" type="button"  value="ADD" (click)="update(name.value, phone.value, city.value)" />
+    </div>
+  </form>
+  

@@ -1,0 +1,29 @@
+<div class="container">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">phone</th>
+        <th scope="col">Address</th>
+        <th scope="col">Details</th>
+        <th scope="col">update</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of users;index as i">
+        <td>{{u.id}}</td>
+        <!-- <td>{{i}}</td> -->
+
+        <td>{{u.name}}</td>
+        <td>{{u.phone}}</td>
+        <td>{{u.city}}</td>
+        <td><button type="button" class="btn btn-light" (click)="getUserById(u.id)">Details</button></td>
+        <td><button type="button" class="btn btn-primary"(click)="UpdateById(u.id)">Update</button></td>
+        <td> <button type="button" class="btn btn-danger" (click)="deleteUserId(u.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
